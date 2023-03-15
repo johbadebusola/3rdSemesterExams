@@ -80,13 +80,34 @@ export default {
             const errorMessage = error.message;
 
             console.log(errorMessage);
+            console.log(errorCode);
             this.isLoading = false;
 
             if (errorCode === "auth/weak-password") {
               this.errorMessage = "Password should be at least 6 charaters";
             }
+            if (errorCode === "auth/email-already-in-use") {
+              this.errorMessage = "Email Already Exist";
+            }
+            if (errorCode === "auth/network-request-failed") {
+            this.errorMessage = "No internet connection";
+          }
+          if (errorCode === "auth/invalid-email") {
+            this.errorMessage = "Invalid email";
+          }
+
+          if (errorCode === "auth/internal-error") {
+            this.errorMessage = "Retry";
+          }
+          if (errorCode === "auth/admin-restricted-operation") {
+            this.errorMessage = "Complete the fields below";
+          }
+
+         
+           
           });
       } else {
+        this.isLoading = false;
         this.errorMessage = "Password does not match";
       }
     },
