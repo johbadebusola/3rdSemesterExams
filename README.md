@@ -1,29 +1,8 @@
+
+
+ FIREBASE LIVE VIEW - https://vueauth-3706b.web.app
 # 3rdsemesterexams
+I Created a new vue js application using the cli then simulated authentication experience using firebase and vue router. I also used VueX for state management.  I made  sure wildcard routes a.k.a 404 pages was implemented . Also, the  authentication experience  consist of the login route - ‘/login’,  the sign up route  - ‘/signup’ and the products route - ‘/products’. Users are not  able to access the products route until they’re logged in and they cant access the login route if they’re already logged in. In this exercise I also Implemented authguards. I extracted out a composable to get the currently logged-in user and created a page that shows the product’s details by using this api https://dummyjson.com/products/1. You can use this api - ‘https://dummyjson.com/products’
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
