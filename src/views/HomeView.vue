@@ -139,8 +139,12 @@ export default {
 }
 
 .Login {
-  width: 220px;
+  width: 300px;
+  padding: 2em;
   margin: auto;
+  margin-top: 6em;
+  border: #1890ff solid 3px;
+  border-radius: 1em;
 }
 
 .Login > hr {
