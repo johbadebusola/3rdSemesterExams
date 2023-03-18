@@ -23,6 +23,9 @@ export default {
     authenticate() {
       this.login();
     },
+    forgotPAssword() {
+      this.$router.push("/forgotPassword");
+    },
     login() {
       const auth = getAuth();
       this.isLoading = true;
@@ -97,7 +100,7 @@ export default {
         <span> <a @click="toggleView"> Signup </a></span>
       </p>
     </div>
-    <p>Forgot Password ?</p>
+    <p @click="forgotPAssword">Forgot Password ?</p>
   </div>
 </template>
 
