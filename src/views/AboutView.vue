@@ -5,7 +5,6 @@
       <button @click="LogOut">Logout</button>
     </header>
     <h3>View various categories of our product</h3>
-
     <div class="loader" v-if="isLoading === true">
       <span class="spinner spinner-large spinner-blue spinner-slow"></span>
     </div>
@@ -55,7 +54,9 @@ export default {
       const auth = getAuth();
       signOut(auth)
         .then(() => {
-          this.$store.dispatch("updateAuth", false);
+         localStorage.setItem("auth",false)
+         const log = localStorage.getItem("auth")
+          this.$store.dispatch("updateAuth", log);
           // Sign-out successful.
           this.$router.push("/");
         })

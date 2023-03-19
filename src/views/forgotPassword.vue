@@ -75,8 +75,12 @@ input {
 }
 
 .container {
-  width: 220px;
+  width: 300px;
+  padding: 2em;
   margin: auto;
+  margin-top: 6em;
+  border: #1890ff solid 3px;
+  border-radius: 1em;
 }
 
 .container > .submit {
@@ -109,8 +113,7 @@ input {
 }
 
 .container > .submit:hover {
-  background-color: white;
-  color: #004182;
+  background-color: #1890ff ;
 }
 
 .errormsg {

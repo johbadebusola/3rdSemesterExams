@@ -42,7 +42,11 @@ export default {
           auth.onAuthStateChanged((user) => {
             if (user) {
               this.isLoggedin = true;
-              this.$store.dispatch("updateAuth", this.isLoggedin);
+              localStorage.setItem("auth",this.isLoggedin)
+            const auths =  localStorage.getItem("auth")
+              this.$store.dispatch("updateAuth", auths);
+
+            
             } else {
               this.isLoggedin = false;
             }
@@ -176,8 +180,8 @@ export default {
   font-family: "Carter One", cursive;
 }
 .Login > .submit-div > button:hover {
-  background-color: white;
-  color: #004182;
+  background-color: #1890ff ;
+
 }
 
 .Login > .toggle-page > p {

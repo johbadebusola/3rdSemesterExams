@@ -1,5 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import store from '.././store'
+const check = store.getters.getAuth
+
+
+
+
 </script>
 
 <template>
