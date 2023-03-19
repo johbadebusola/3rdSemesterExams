@@ -48,7 +48,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
  
-  const check = localStorage.getItem("auth")
+  const check = store.getters.getAuth
  
  // To Prevent routing to the product page  when the user is not logged in 
   if (to.meta.needsAuth) {

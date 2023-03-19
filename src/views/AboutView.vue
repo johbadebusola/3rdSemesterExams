@@ -54,9 +54,7 @@ export default {
       const auth = getAuth();
       signOut(auth)
         .then(() => {
-         localStorage.setItem("auth",false)
-         const log = localStorage.getItem("auth")
-          this.$store.dispatch("updateAuth", log);
+          this.$store.dispatch("updateAuth", false);
           // Sign-out successful.
           this.$router.push("/");
         })

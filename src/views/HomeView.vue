@@ -42,10 +42,7 @@ export default {
           auth.onAuthStateChanged((user) => {
             if (user) {
               this.isLoggedin = true;
-              localStorage.setItem("auth",this.isLoggedin)
-            const auths =  localStorage.getItem("auth")
-              this.$store.dispatch("updateAuth", auths);
-
+              this.$store.dispatch("updateAuth", this.isLoggedin);
             
             } else {
               this.isLoggedin = false;
